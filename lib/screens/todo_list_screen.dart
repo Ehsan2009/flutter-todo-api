@@ -46,11 +46,14 @@ class _TodoListScreenState extends State<TodoListScreen> {
               }
 
               if (!asyncSnapshot.hasData || asyncSnapshot.data!.isEmpty) {
-                return Padding(
-                  padding: const EdgeInsets.only(top: 240),
-                  child: Text(
-                    'No Todo Item',
-                    style: TextStyle(color: Colors.white, fontSize: 26),
+                return Align(
+                  alignment: Alignment.topCenter,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 240),
+                    child: Text(
+                      'No Todo Item',
+                      style: TextStyle(color: Colors.white, fontSize: 26),
+                    ),
                   ),
                 );
               }

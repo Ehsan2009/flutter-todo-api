@@ -43,9 +43,6 @@ class TodoService {
       body: jsonEncode(request),
     );
 
-    print('Status: ${response.statusCode}');
-    print('Body: ${response.body}');
-
     if (response.statusCode != 200) {
       throw Exception('Failed to update todo: ${response.body}');
     }

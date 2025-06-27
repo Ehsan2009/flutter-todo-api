@@ -16,22 +16,18 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      style: TextStyle(color: Colors.white),
-      cursorColor: Colors.white,
       maxLines: maxLines,
+      style: TextStyle(color: Colors.white),
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: const TextStyle(color: Colors.blueGrey),
         enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey), // Default line
-        ),
-        focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey), // No change on focus
+          borderSide: BorderSide(color: Colors.grey),
         ),
         border: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey), // Fallback
+          borderSide: BorderSide(color: Colors.grey),
         ),
-        hoverColor: Colors.transparent, // Avoid hover color on web/desktop
+        hoverColor: Colors.transparent,
       ),
       validator: (value) {
         if (value!.isEmpty || value.trim().length < 4) {
