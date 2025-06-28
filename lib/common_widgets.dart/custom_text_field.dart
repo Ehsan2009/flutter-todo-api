@@ -31,7 +31,7 @@ class CustomTextField extends StatelessWidget {
       ),
       validator: (value) {
         if (value!.isEmpty || value.trim().length < 4) {
-          return 'Please enter atleast 4 characters';
+          return 'Please enter at least 4 characters';
         }
         return null;
       },

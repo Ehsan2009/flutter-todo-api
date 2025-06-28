@@ -31,6 +31,7 @@ class TodoTile extends StatelessWidget {
             const SizedBox(width: 16),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(todo.title, style: TextStyle(color: Colors.white)),
                 Text(
@@ -77,7 +78,6 @@ class TodoTile extends StatelessWidget {
                 ];
               },
             ),
-            // Icon(Icons.more_horiz, color: Colors.white),
           ],
         ),
       ),
